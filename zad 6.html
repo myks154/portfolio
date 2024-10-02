@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bmi.css"/>
+    <title>Document</title>
+    <script>
+        function pokaz(){
+            let liczba=document.getElementById("liczba").value
+             if (liczba=='') document.getElementById("wynik").innerHTML="Musisz podać dane!!!!!!"
+             else{
+                let a = liczba*liczba
+                let ciag = ''
+                let b = liczba*liczba*liczba
+                let c= Math.sqrt(liczba)
+                let d= Math.cbrt(liczba)
+                if(liczba<0) document.getElementById("wynik3").innerHTML="Pierwiastek z tej liczby nie istnieje"
+                else document.getElementById("wynik3").innerHTML="Pierwiastek z tej liczby to: "+c
+                document.getElementById("wynik").innerHTML=" Twoja liczba to: "+liczba
+                document.getElementById("wynik2").innerHTML=" Kwadrat  liczby "+liczba+" to: "+a
+                document.getElementById("wynik1").innerHTML=" Sześcian  liczby "+liczba+" to: "+b
+                document.getElementById("wynik5").innerHTML=" Pierwaistek 3 stopnia z "+liczba+" to: "+d
+                if (liczba==0) document.getElementById("wynik6").innerHTML="Liczba jest zerowa"
+                else if (liczba>0) document.getElementById("wynik6").innerHTML="Liczba jest dodatnia"
+                else if (liczba<-1) document.getElementById("wynik6").innerHTML="Liczba jest minusowa"
+                if (liczba%2==0) document.getElementById("wynik7").innerHTML="Liczba jest parzysta"
+                else document.getElementById("wynik7").innerHTML="Liczba jest nieparzysta"
+                document.getElementById("wynik8").innerHTML=" Liczba "+liczba+" w postaci binarnej  to: "+Math.abs(liczba).toString(2)
+                document.getElementById("wynik9").innerHTML=" Liczba "+liczba+" w postaci heksadecymalnej  to: "+Math.abs(liczba).toString(16)
+                for (i=1;i<=liczba;i++){
+                    if (liczba%i==0){
+                        ciag=ciag+i+' '
+                        document.getElementById("wynik10").innerHTML=" Dzielniki liczby "+liczba+" to: "+ciag
+                    }
+                }
+                
+             }
+        }
+    </script>
+</head>
+<body>
+    <header class="banner">
+        <h1>liczby</h1>
+    </header>
+    <section class="lewy"></section>
+    </section>
+    <section class="srodek">
+        <p>Podaj liczbę<input class="wpis" type="number" id="liczba" placeholder="liczba"/></p>
+        <input class="przycisk" type="button" value="Info o liczbie" onclick="pokaz()" />
+        <h3 id="wynik"></h3>
+        <h3 id="wynik2"></h3>
+        <h3 id="wynik1"></h3>
+        <h3 id="wynik3"></h3>
+        <h3 id="wynik5"></h3>
+        <h3 id="wynik6"></h3>
+        <h3 id="wynik7"></h3>
+        <h3 id="wynik8"></h3>
+        <h3 id="wynik9"></h3>
+        <h3 id="wynik10"></h3>
+    </section>
+    <section class="prawy">
+
+    </section>
+</body>
+</html>
