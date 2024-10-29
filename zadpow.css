@@ -1,0 +1,48 @@
+#lewy{
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 30%;
+    float: left;
+}
+#prawy{
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+    float: left;
+    overflow: auto;
+}
+.stopka{
+    background-color: dimgray;
+    color: white;
+    clear: both;
+}
+.indigo{
+    background-color: indigo;
+    color: white;
+}
+.steelblue{
+    background-color: steelblue;
+    color: white;
+}
+.olive{
+    background-color: olive;
+    color: white;
+}
+#prawy ul,img{
+    float: left;
+}
+#prawy p{
+    clear: both;
+}
+#prawy center{
+    float: center;
+}
+
+img {
+    height: 300px;
+    border: 1px white solid;
+    
+}
+

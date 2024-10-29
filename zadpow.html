@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="zadpow.css"/>
+    <title></title>
+    <script>
+        function tlo1(){
+            document.getElementById("prawy").style.backgroundColor="Indigo"
+        }
+        function tlo2(){
+            document.getElementById("prawy").style.backgroundColor="SteelBlue"
+        }
+        function tlo3(){
+            document.getElementById("prawy").style.backgroundColor="Olive"
+        }
+        function kolorczcionki(){
+            document.getElementById("prawy").style.color=document.getElementById("kolor").value;
+        }
+        function rozmiar(){
+            document.getElementById("prawy").style.fontSize=document.getElementById("rozmiar").value;
+        }
+        function ramka(){
+            if (document.getElementById("ramka").checked==true) document.getElementById("obrazek").style.border="1px solid white";
+            else document.getElementById("obrazek").style.border="0px";
+
+        }
+    </script>
+</head>
+<body>
+    <section id="lewy">
+        <h1>Konfigurator stylu</h1>
+        Podaj kolor tła:<br>
+        <p><input type="button" class="indigo" value="Indigo" onClick="tlo1()"/>
+        <input type="button" class="steelblue" value="SteelBlue" onClick="tlo2()"/>
+        <input type="button" class="olive" value="Olive" onClick="tlo3()"/></p>
+        <p>Podaj kolor czcionki:<br>
+            <select id="kolor" onclick="kolorczcionki()">
+                <option value="white">White</option>
+                <option value="Tan">Tan</option>
+                <option value="Bisque">Bisque</option>
+                <option value="Plum">Plum</option></p>
+            </select>
+        <p>Podaj rozmiar czcionki w procentach:<br>
+        <input type="text" id="rozmiar" value="100%" placeholder="100%" onblur="rozmiar()"/><br>
+        <p>Czy tekst ma mieć ramkę?</p>
+        <p><input type="checkbox" id="ramka" onClick="ramka()" checked>Rysuj ramkę</p>
+        <p>Jaki jest typ punktora listy:</p>
+        <label><input type="radio" id="dysk" name="tak"/>Dysk</label><br>
+        <label><input type="radio" id="kwadrat" name="tak"/>Kwadrat</label><br>
+        <label><input type="radio" id="okrag" name="tak"/>Okrąg</label>
+   
+    </section>
+    <section id="prawy">
+        <img src="gibraltar.jpg" id="obrazek">
+        <ul>
+            <li>Element1</li>
+            <li>Element2</li>
+            <li>Element3</li>
+        </ul>
+
+        <p><class=prawy center>Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. Cupiditate reprehends
+        erit nihil molestiae optio assumenda n
+        atus laborum, dignissimos fuga delenit
+        i vero voluptatem officia dicta est,do
+        loremque id? Aliquam excepturi consequ
+        atur dignissimos.</p></class>
+    </section>
+    <footer class="stopka">
+            Maksymilian Juja
+    </footer>
+</body>
+</html>
